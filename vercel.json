@@ -27,5 +27,19 @@
     "DB_PASSWORD": "@supabase_db_password",
     "APP_KEY": "@app_key"
   },
-  "outputDirectory": ""
+  "build": {
+    "env": {
+      "APP_ENV": "production",
+      "APP_DEBUG": "false",
+      "APP_URL": "https://hidroponico-gamma.vercel.app",
+      "DB_CONNECTION": "pgsql",
+      "DB_HOST": "@supabase_db_host",
+      "DB_PORT": "5432",
+      "DB_DATABASE": "monitoramento",
+      "DB_USERNAME": "@supabase_db_username",
+      "DB_PASSWORD": "@supabase_db_password",
+      "APP_KEY": "@app_key"
+    },
+    "outputDirectory": ""
+  }
 }
