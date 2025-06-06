@@ -26,5 +26,6 @@
     "DB_USERNAME": "@supabase_db_username",
     "DB_PASSWORD": "@supabase_db_password",
     "APP_KEY": "@app_key"
-  }
+  },
+  "outputDirectory": ""
 }
