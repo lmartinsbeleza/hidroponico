@@ -3,7 +3,10 @@
   "builds": [
     {
       "src": "/api/**/*.php",
-      "use": "@vercel/php"
+      "use": "@vercel/php",
+      "config": {
+        "phpExtensions": ["pdo_pgsql"]
+      }
     }
   ],
   "routes": [
