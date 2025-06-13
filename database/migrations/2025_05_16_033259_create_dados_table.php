@@ -10,7 +10,7 @@ return new class extends Migration {
             $table->id();
             $table->double('ph')->nullable();
             $table->double('temperatura')->nullable();
-            $table->double('conditividade')->nullable();
+            $table->double('condutividade')->nullable();
             $table->unsignedBigInteger('hidroponia_id');
             $table->timestamps();
 
