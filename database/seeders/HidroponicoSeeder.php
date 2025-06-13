@@ -2,16 +2,19 @@
 
 namespace Database\Seeders;
 
+use App\Models\Hidroponico;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class HidroponicoSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
-    {
-        //
+    public function run(): void {
+        $plantacoes = ["Alface", "Tomate", "Erva"];
+
+        foreach($plantacoes as $planta){
+            Hidroponico::create([
+                'plantacao' => $planta
+            ]);
+        }
     }
 }
