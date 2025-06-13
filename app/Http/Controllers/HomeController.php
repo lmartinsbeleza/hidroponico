@@ -22,6 +22,11 @@ class HomeController extends Controller
         $this->userHidroponiaMD = $usersHidroponia;
     }
 
+    public function homePage()
+    {
+        return view('homePage');
+    }
+
     public function dashboard() {
         return view('dashboard');
     }
