@@ -23,6 +23,14 @@ class ApiController extends Controller
     }
 
     public function getData(Request $req) {
+        $this->dados->create([
+            "ph" => 1.1,
+            "temperatura" => 1.1,
+            "condutividade" => 1.1,
+            "hidroponia_id" => 1
+        ]);
+
+
         return response()->json($req->all(), 200);
     }
 }
