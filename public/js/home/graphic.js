@@ -1,3 +1,8 @@
+let dados = [];
+window.getDataFromPage = function (data){
+    dados = data
+}
+
 window.onload = function() {
     //Variaveis do Ambiente
     let chartTemp = null;
@@ -204,9 +209,6 @@ window.onload = function() {
         markers: {
             size: 0
         },
-        yaxis: {
-            max: 100
-        },
         legend: {
             show: false
         },
@@ -216,7 +218,7 @@ window.onload = function() {
     chartHumid = new ApexCharts(document.querySelector("#humidadeGraphic"), optionsHumidit);
     chartEvol = new ApexCharts(document.querySelector("#evolutivGraphic"), optionsEvolutiv);
     chartTemp.render();
-    chartTemp.render();
+    chartHumid.render();
     chartEvol.render();
 
     console.log(
@@ -224,8 +226,19 @@ window.onload = function() {
         window.location.origin+"/api/getData"
     )
     setInterval(function(){
-        // $.ajax({
-        //     url: 
-        // });
+        console.log(dados)
+
+        $.ajax({
+            url: window.location.origin+"/api/getData",
+            success: function(result){
+                console.log(result);
+                chartEvol.updateSeries([{
+                    data: [result.ph]
+                }]);
+            },
+            error: function(result){
+                console.log(result, "error")
+            }
+        });
     }, 3000);
 };

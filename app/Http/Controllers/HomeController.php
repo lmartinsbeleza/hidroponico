@@ -28,6 +28,10 @@ class HomeController extends Controller
     }
 
     public function dashboard() {
-        return view('dashboard');
+        $data = $this->dados->latest()->take(20)->get();
+        
+        return view('dashboard', [
+            "data" => $data
+        ]);
     }
 }

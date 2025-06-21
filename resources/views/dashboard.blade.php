@@ -19,4 +19,9 @@
         </div>
     </div>
     <script src="{{ asset('js/home/graphic.js') }}"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            getDataFromPage(@json($data));
+        });
+    </script>
 </x-layout>
