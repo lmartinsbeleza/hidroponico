@@ -5,5 +5,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::controller(ApiController::class)->group(function(){
-    Route::post('/getData', 'getData')->name('getData');
+    Route::get('/getData', 'getData')->name('getData');
+    Route::post('/sendData', 'sendData')->name('sendData');
 });

@@ -1,11 +1,11 @@
 <x-layout>
     <div class="container mt-4">
-        <div class="row row-gap-3">
-            <div class="col-lg-4">
+        <div class="row w-100">
+            <div class="col-md-6">
                 <div id="temperatureGraphic"></div>
             </div>
-            <div class="col-lg-8">
-                <div id="phGraphic"></div>
+            <div class="col-md-6">
+                <div id="humidadeGraphic"></div>
             </div>
             <div class="col-12">
                 <div id="condictivityGraphic"></div>

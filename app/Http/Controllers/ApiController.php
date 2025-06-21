@@ -23,14 +23,32 @@ class ApiController extends Controller
     }
 
     public function getData(Request $req) {
-        $this->dados->create([
-            "ph" => 1.1,
-            "temperatura" => 1.1,
-            "condutividade" => 1.1,
-            "hidroponia_id" => 1
-        ]);
+        try{
+            $data = $this->dados->latest()->first();
+    
+            return response()->json($data, 200);
+        }catch(\Exception $e){
+            return response()->json($e->getMessage(), 500);
+        }
+    }
 
-
-        return response()->json($req->all(), 200);
+    public function sendData(Request $req) {
+        try{
+            $this->dados->create([
+                "hidroponia_id" => $req->hidroponia,
+                "ph" => $req->ph,
+                "temperatura_agua" => $req->temperatura_agua == "nan" ? 0.0 : $req->temperatura_agua,
+                "condutividade" => $req->TDS,
+                "temperatura_ambiente" => $req->temperatura_ambiente == "nan" ? 0.0 : $req->temperatura_ambiente,
+                "luminosidade" => $req->luminosidade,
+                "nivel_baixo" => $req->nivel_baixo === "true",
+                "nivel_alto" => $req->nivel_alto === "true",
+            ]);
+    
+    
+            return response()->json($req->all(), 200);
+        }catch(\Exception $e){
+            return response()->json($e->getMessage(), 500);
+        }
     }
 }
