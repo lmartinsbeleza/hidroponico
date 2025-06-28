@@ -22,13 +22,24 @@ class HomeController extends Controller
         $this->userHidroponiaMD = $usersHidroponia;
     }
 
-    public function homePage()
-    {
+    public function homePage() {
         return view('homePage');
     }
 
+    public function login() {
+        if(auth()->check()) return redirect()->route('dashboard');
+        return view('login');
+    }
+
+    public function authenticate(Request $req) {
+        if(auth()->attempt(["email" => $req->email, "password" => $req->password])) 
+            return redirect()->route('dashboard')->with("message", "Bem-vindo: ".auth()->user()->name);
+
+        return redirect()->back()->withErrors("Usuário ou Senha incorretos!");
+    }
+
     public function dashboard() {
-        $data = $this->dados->latest()->take(20)->get();
+        $data = $this->dados->latest()->take(15)->get();
         
         return view('dashboard', [
             "data" => $data

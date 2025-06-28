@@ -1,6 +1,6 @@
 @props([ 'title' => 'HidroView', 'background_color' => '', 'class' => ''])
 <!DOCTYPE html>
-<html lang="pt-br" class="bg-gray-200">
+<html lang="pt-br" class="bg-gray-200" style="width: 100%; height: 100%;">
   <head>
     <title>{{ $title }}</title>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Arquivos de Estilização -->
     <link href="{{ asset('css/app.css')}}" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ asset('mobrise/images/emblema-96x85.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('img/HidroView.ico') }}" type="image/x-icon">
 
     <!-- Arquivos JavaScript -->
     <script src="{{ asset('js/jquery.js') }}" defer></script>
@@ -18,8 +18,8 @@
     <script src="{{ asset('library/apexcharts/apexcharts.js') }}" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
   </head>
-  <body class="{{ $background_color.' font-sans antialiased' }}">
-    <x-notification />
+  <x-notification />
+  <body class="{{ $background_color.' font-sans antialiased' }}" style="width: 100%; height: 100%;">
     <div class="{{ $class }}" style="width: 100%; height: 100%;">
       {{ $slot }}
     </div>

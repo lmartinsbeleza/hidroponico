@@ -1,4 +1,4 @@
-@if (session('message') || count($errors) > 0)
+@if (session('message') || $errors->any())
   <div class="toast-container position-fixed top-0 end-0 p-3">
     <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
       <div class="toast-header">
@@ -14,6 +14,16 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toastEl = document.getElementById('toast');
+      if (toastEl) {
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
+      }
+    });
+  </script>
 @endif
 
 <div class="toast-container position-fixed top-0 end-0 p-3">
@@ -26,4 +36,3 @@
     <div class="toast-body" id="toast-body"></div>
   </div>
 </div>
-

@@ -8,10 +8,10 @@
                 <div id="humidadeGraphic"></div>
             </div>
             <div class="col-12">
-                <div id="condictivityGraphic"></div>
+                <div id="condutivityGraphic"></div>
             </div>
             <div class="col-12">
-                <div id="evolutivGraphic"></div>
+                <div id="phGraphic"></div>
             </div>
             <div class="col-12">
                 Pagina ainda em construção...
