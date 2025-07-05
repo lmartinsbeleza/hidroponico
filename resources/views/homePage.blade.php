@@ -267,10 +267,10 @@
                                 <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
                                     <strong>Iago Medeiros</strong></h5>
                                 <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
-                                    <strong>Eletrônico</strong>
+                                    <strong>Projetista</strong>
                                 </h6>
                                 <p class="card-text mbr-fonts-style align-center display-7">
-                                    Descrição sobre o trabalho...
+                                    Desenvolvedor eletrônico e mecânico
                                 </p>
                             </div>
                         </div>
@@ -285,10 +285,10 @@
                                 <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
                                     <strong>Matheus Rovani</strong></h5>
                                 <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
-                                    <strong>Mecânico</strong>
+                                    <strong>Água</strong>
                                 </h6>
                                 <p class="card-text mbr-fonts-style align-center display-7">
-                                    Descrição sobre o trabalho...
+                                    Tá ai..
                                 </p>
                             </div>
                         </div>

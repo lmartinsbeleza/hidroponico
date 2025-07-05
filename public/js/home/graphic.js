@@ -5,17 +5,16 @@ window.getDataFromPage = function (data){
 
 window.onload = function() {
     //Variaveis do Ambiente
-    let chartTemp = null;
-    let chartHumid = null;
-    let chartLumin = null;
+    let chartTempAmb = null;
+    let chartTempAgua = null;
 
     //Variaveis da Agua
-    let optionsCondutivity = null;
     let optionsEvolutivPh = null;
+    let optionsCondutivityTempAgua = null;
     var data = [];
 
-    const optionsTemperature = {
-        series: [100],
+    const optionsTemperatureAmbiente = {
+        series: [0.0],
         chart: {
             height: 350,
             type: 'radialBar',
@@ -65,7 +64,7 @@ window.onload = function() {
                     },
                     value: {
                         formatter: function(val) {
-                            return parseInt(val);
+                            return val.toFixed(2) + " °C";
                         },
                         color: '#111',
                         fontSize: '36px',
@@ -91,11 +90,11 @@ window.onload = function() {
         stroke: {
             lineCap: 'round'
         },
-        labels: ['Percent'],
+        labels: ['Temperatura \n Ambiente'],
     };
 
-    const optionsHumidit = {
-        series: [100],
+    const optionsTemperatureAgua = {
+        series: [0.0],
         chart: {
             height: 350,
             type: 'radialBar',
@@ -145,7 +144,7 @@ window.onload = function() {
                     },
                     value: {
                         formatter: function(val) {
-                            return parseInt(val);
+                            return val.toFixed(2) + " °C";
                         },
                         color: '#111',
                         fontSize: '36px',
@@ -171,47 +170,7 @@ window.onload = function() {
         stroke: {
             lineCap: 'round'
         },
-        labels: ['Percent'],
-    };
-
-    optionsCondutivity = {
-        series: [{
-            data: data.slice()
-        }],
-        chart: {
-            id: 'realtime',
-            height: 350,
-            type: 'line',
-            animations: {
-                enabled: true,
-                easing: 'linear',
-                dynamicAnimation: {
-                    speed: 1000
-                }
-            },
-            toolbar: {
-                show: false
-            },
-            zoom: {
-                enabled: false
-            }
-        },
-        dataLabels: {
-            enabled: false
-        },
-        stroke: {
-            curve: 'smooth'
-        },
-        title: {
-            text: 'Dynamic Updating Chart',
-            align: 'left'
-        },
-        markers: {
-            size: 0
-        },
-        legend: {
-            show: false
-        },
+        labels: ["Temperatura D'Água"],
     };
 
     optionsEvolutivPh = {
@@ -228,62 +187,108 @@ window.onload = function() {
                 dynamicAnimation: {
                     speed: 1000
                 }
-            },
-            toolbar: {
-                show: false
-            },
-            zoom: {
-                enabled: false
             }
         },
         dataLabels: {
-            enabled: false
+            enabled: true
         },
         stroke: {
             curve: 'smooth'
         },
         title: {
-            text: 'Dynamic Updating Chart',
-            align: 'left'
+            text: 'Ph',
+            align: 'center'
         },
         markers: {
             size: 0
-        },
-        legend: {
-            show: false
-        },
+        }
     };
 
-    chartTemp = new ApexCharts(document.querySelector("#temperatureGraphic"), optionsTemperature);
-    chartHumid = new ApexCharts(document.querySelector("#humidadeGraphic"), optionsHumidit);
-    chartCond = new ApexCharts(document.querySelector("#condutivityGraphic"), optionsCondutivity);
+    optionsCondutivityTempAgua = {
+        series: [{
+            data: data.slice()
+        }],
+        chart: {
+            id: 'realtime',
+            height: 350,
+            type: 'line',
+            animations: {
+                enabled: true,
+                easing: 'linear',
+                dynamicAnimation: {
+                    speed: 1000
+                }
+            }
+        },
+        dataLabels: {
+            enabled: true
+        },
+        stroke: {
+            curve: 'smooth'
+        },
+        title: {
+            text: 'Condutividade e Temperatura',
+            align: 'center'
+        },
+        markers: {
+            size: 0
+        }
+    };
+
+    chartTempAmb = new ApexCharts(document.querySelector("#temperatureAmbienteGraphic"), optionsTemperatureAmbiente);
+    chartTempAgua = new ApexCharts(document.querySelector("#temperatureAguaGraphic"), optionsTemperatureAgua);
+
     chartPh = new ApexCharts(document.querySelector("#phGraphic"), optionsEvolutivPh);
-    chartTemp.render();
-    chartHumid.render();
-    chartCond.render();
+    chartCondTemp = new ApexCharts(document.querySelector("#condutivityGraphic"), optionsCondutivityTempAgua);
+    
+    chartTempAmb.render();
+    chartTempAgua.render();
     chartPh.render();
+    chartCondTemp.render();
 
     function insertDataInGraphics(dados){
+        const nivelAlto = $("#nivelAlto");
+        const nivelBaixo = $("#nivelBaixo");
+
         let cond = [];
+        let temp = [];
         let ph = [];
-        let tempAgua = [];
-        let tempAmibente = [];
+        let tempAgua = 0.0;
+        let tempAmibente = 0.0;
         let lum = [];
         let horario = [];
         
         for(const data of dados){
             const dataHor = new Date(data.created_at);
 
+            //Atualiza dados de porcentagem
+            tempAgua = (data.temperatura_agua);
+            tempAmibente = (data.temperatura_ambiente);
+
+            //Atualiza Sensores de Nível
+            nivelAlto.addClass(data.nivel_alto ? "red" : "green").removeClass(data.nivel_alto ? "green" : "red");
+            nivelBaixo.addClass(data.nivel_baixo ? "green" : "red").removeClass(data.nivel_baixo ? "red" : "green");
+
+            //Atualiza dados de linha
             cond.push(data.condutividade);
+            temp.push(data.temperatura_agua);
             ph.push(data.ph);
-            tempAgua.push(data.temperatura_agua);
-            tempAmibente.push(data.temperatura_ambiente);
             lum.push(data.luminosididade);
             horario.push(`${dataHor.getDate()}/${dataHor.getMonth() + 1} - ${dataHor.getHours()}:${dataHor.getMinutes()}`);
         }
+        //Atualiza graficos de porcentagem
+        chartTempAmb.updateSeries([ tempAmibente ]);
+        chartTempAgua.updateSeries([ tempAgua ]);
 
-        chartCond.updateSeries([{ data: cond }]);
-        chartCond.updateOptions({
+        //Atualiza gráficos de linha
+        chartCondTemp.updateSeries([{
+            name: "Condutividade",
+            data: cond
+        }, {
+            name: "Temperatura",
+            data: temp
+        }]);
+        chartCondTemp.updateOptions({
             xaxis: {
                 categories: horario
             }
@@ -305,10 +310,9 @@ window.onload = function() {
         $.ajax({
             url: window.location.origin+"/api/getData",
             success: function(result){
-                dados.shift();
                 dados.push(result)
                 
-                insertDataInGraphics(dados);
+                insertDataInGraphics(result);
             },
             error: function(result){
                 console.log(result, "error")

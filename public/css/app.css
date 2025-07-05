@@ -5,3 +5,76 @@
 @import '../library/bootstrap-5.3.6/css/bootstrap-utilities.css';
 @import '../library/fontawesome-6.7.2/css/all.css';
 @import '../library/apexcharts/apexcharts.css';
+
+span.legenda {
+  margin-top: -10px;
+  margin-right: 20px;
+  margin-bottom: -10px;
+  align-items: center;
+  display: flex;
+}
+span.legenda.green::before {
+  content: "• ";
+  color: #198754;
+  font-size: 120px;
+  margin-right: 3px;
+}
+span.legenda.red::before {
+  content: "• ";
+  color: #dc3545;
+  font-size: 120px;
+  margin-right: 3px;
+}
+
+.required:after{
+    content:" *";
+    color: red;
+}
+
+:root {
+  --bleeding: 0.5cm;
+  --margin: 1cm;
+}
+
+@page {
+  size: A4;
+}
+
+.rm-ball{
+  list-style-type: none;
+}
+
+@media print {
+  :root {
+    --bleeding: 0cm;
+    --margin: 0cm;
+  }
+
+  .page {
+    border: none!important;
+    margin: 0;
+    width: 100%!important;
+    font-size: 11pt;
+  }
+  .no-print {
+    display: none!important;
+  }
+  .no-border.shadow {
+    border: 0!important;
+    box-shadow: 0 0 0 0 !important;
+  }
+}
+
+.bg-black-300 {
+  background-color: #575757bd!important;
+}
+
+.form-check-input:checked {
+    background-color: #198754; /* verde do Bootstrap (success) */
+    border-color: #198754;
+}
+
+/* Opcional: ajustar a cor do botão "thumb" quando ativado */
+.form-check-input:checked:focus {
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
