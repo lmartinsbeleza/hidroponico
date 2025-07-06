@@ -11,7 +11,7 @@ return new class extends Migration {
             $table->double('ph')->nullable();
             $table->double('temperatura_agua')->nullable();
             $table->double('condutividade')->nullable();
-            $table->double('luminosididade')->nullable();
+            $table->double('luminosidade')->nullable();
             $table->double('temperatura_ambiente')->nullable();
             $table->boolean('nivel_baixo')->default(false);
             $table->boolean('nivel_alto')->default(false);

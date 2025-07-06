@@ -11,9 +11,13 @@ class Dados extends Model
     use HasFactory, Notifiable;
     protected $table = "dados";
     protected $fillable = [
+        "hidroponia_id",
         "ph",
-        "temperatura",
+        "temperatura_agua",
         "condutividade",
-        "hidroponia_id"
+        "temperatura_ambiente",
+        "luminosidade",
+        "nivel_baixo",
+        "nivel_alto",
     ];
 }

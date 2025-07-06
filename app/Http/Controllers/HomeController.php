@@ -39,7 +39,7 @@ class HomeController extends Controller
     }
 
     public function dashboard() {
-        $data = $this->dados->latest()->take(15)->get();
+        $data = $this->dados->orderByDesc("id")->take(15)->get();
         
         return view('dashboard', [
             "data" => $data

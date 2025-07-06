@@ -24,7 +24,7 @@ class ApiController extends Controller
 
     public function getData(Request $req) {
         try{
-            $data = $this->dados->latest()->first();
+            $data = $this->dados->orderByDesc("id")->first();
     
             return response()->json($data, 200);
         }catch(\Exception $e){
@@ -37,10 +37,10 @@ class ApiController extends Controller
             $this->dados->create([
                 "hidroponia_id" => $req->hidroponia,
                 "ph" => $req->ph,
-                "temperatura_agua" => $req->temperatura_agua == "nan" ? 0.0 : $req->temperatura_agua,
+                "temperatura_agua" => $req->temperatura_agua == "nan" || is_null($req->temperatura_agua) ? 0.0 : $req->temperatura_agua,
                 "condutividade" => $req->TDS,
-                "temperatura_ambiente" => $req->temperatura_ambiente == "nan" ? 0.0 : $req->temperatura_ambiente,
-                "luminosidade" => $req->luminosidade,
+                "temperatura_ambiente" => $req->temperatura_ambiente == "nan" || is_null($req->temperatura_ambiente)? 0.0 : $req->temperatura_ambiente,
+                "luminosidade" => $req->luminosidade >= 0 ? 0.0 : $req->luminosidade,
                 "nivel_baixo" => $req->nivel_baixo === "true",
                 "nivel_alto" => $req->nivel_alto === "true",
             ]);
