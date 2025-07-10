@@ -49,9 +49,6 @@
                             <li class="nav-item">
                                 <a class="nav-link link text-primary display-7" href="#time">Time</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link link text-primary display-7" href="#galeria">Galeria</a>
-                            </li>
                         </ul>
                         <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="{{ route("login") }}">Login</a></div>
                     </div>
@@ -160,7 +157,9 @@
                                     <div class="row">
                                         <div class="col-md">
                                             <h6 class="card-title mbr-fonts-style display-2"><strong>Alface</strong></h6>
-                                            <p class="mbr-text mbr-fonts-style display-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam a nibh ut consectetur. Vestibulum nec massa a nisl condimentum mattis. Mauris semper risus dui, vitae pulvinar sapien rutrum in. Cras risus ante, porta vel volutpat vel.<br></p>
+                                            <p class="mbr-text mbr-fonts-style display-7" style="text-align: justify !important;">
+                                                A alface hidropônica é cultivada em água, sem solo, utilizando soluções nutritivas que fornecem todos os elementos essenciais para o seu crescimento. Esse sistema permite um uso mais eficiente da água e nutrientes, além de um crescimento mais rápido e com menor incidência de pragas e doenças. É uma técnica moderna que resulta em uma alface limpa, de alta qualidade e com colheita programada.<br>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -181,7 +180,9 @@
                                     <div class="row">
                                         <div class="col-md">
                                             <h6 class="card-title mbr-fonts-style display-2"><strong>Ervas</strong><strong><br></strong></h6>
-                                            <p class="mbr-text mbr-fonts-style display-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam a nibh ut consectetur. Vestibulum nec massa a nisl condimentum mattis. Mauris semper risus dui, vitae pulvinar sapien rutrum in. Cras risus ante, porta vel volutpat vel.</p>
+                                            <p class="mbr-text mbr-fonts-style display-7" style="text-align: justify !important;">
+                                                O cultivo hidropônico de ervas é uma técnica eficiente que as cultiva em soluções nutritivas aquáticas, sem a necessidade de solo. Isso permite um crescimento mais rápido, controle preciso de nutrientes e colheitas frequentes, resultando em ervas frescas, saborosas e com alta qualidade, ideais para uso culinário e medicinal. É uma forma sustentável de produzir suas próprias ervas em casa ou em escala comercial.    
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -202,7 +203,9 @@
                                     <div class="row">
                                         <div class="col-md">
                                             <h6 class="card-title mbr-fonts-style display-2"><strong>Tomates</strong></h6>
-                                            <p class="mbr-text mbr-fonts-style display-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam a nibh ut consectetur. Vestibulum nec massa a nisl condimentum mattis. Mauris semper risus dui, vitae pulvinar sapien rutrum in. Cras risus ante, porta vel volutpat vel.<br></p>
+                                            <p class="mbr-text mbr-fonts-style display-7" style="text-align: justify !important;">
+                                                Tomates hidropônicos são cultivados em ambientes controlados, onde as plantas recebem uma solução nutritiva balanceada diretamente em suas raízes, sem a necessidade de solo. Esse método proporciona um crescimento acelerado, maior produtividade e frutos de alta qualidade, além de economizar água e reduzir a incidência de pragas. É uma alternativa moderna e eficiente para a produção de tomates frescos.<br>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -220,7 +223,7 @@
                         <div class="col-12 col-lg">
                             <div class="text-wrapper">
                                 <h6 class="card-title mbr-fonts-style display-2"><strong>Sobre o projeto</strong></h6>
-                                <p class="mbr-text mbr-fonts-style mb-4 display-4">O HidroView oferece uma solução de monitoramento de parâmetros hídricos de alta precisão, projetada especificamente para pequenos e médios produtores agrícolas e sistemas hidropônicos. Entendemos a importância da água na sua produção, e nosso sistema permite que você acompanhe em tempo real os indicadores cruciais para a saúde e o rendimento das suas culturas.<br><br>Com o HidroView, você tem acesso a dados confiáveis e customizáveis, proporcionando a base para decisões mais assertivas e uma gestão otimizada do seu sistema. Nossa plataforma é intuitiva e adaptável às suas necessidades, garantindo que você tenha o controle total sobre um dos recursos mais vitais da sua operação agrícola.</p>
+                                <p class="mbr-text mbr-fonts-style mb-4 display-4" style="text-align: justify !important;">O HidroView oferece uma solução de monitoramento de parâmetros hídricos de alta precisão, projetada especificamente para pequenos e médios produtores agrícolas e sistemas hidropônicos. Entendemos a importância da água na sua produção, e nosso sistema permite que você acompanhe em tempo real os indicadores cruciais para a saúde e o rendimento das suas culturas.<br><br>Com o HidroView, você tem acesso a dados confiáveis e customizáveis, proporcionando a base para decisões mais assertivas e uma gestão otimizada do seu sistema. Nossa plataforma é intuitiva e adaptável às suas necessidades, garantindo que você tenha o controle total sobre um dos recursos mais vitais da sua operação agrícola.</p>
                             </div>
                         </div>
                         <div class="col-12 col-lg-6">
@@ -249,11 +252,10 @@
                             <div class="content-wrap">
                                 <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5"><strong>Luiz Paulo</strong></h5>
                                 <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
-                                    <strong>Programador</strong>
+                                    <strong>Engenheiro de Controle e Automação</strong>
                                 </h6>
-                                <p class="card-text mbr-fonts-style align-center display-7">
-                                    Desenvolvimento e Comunicação entre Sistema e Supervisório
-                                </p>
+                                <p class="card-text mbr-fonts-style display-7" style="text-align: justify !important;">
+                                    Responsável pelo desenvolvimento da comunicação e integração entre sistemas de controle e supervisórios, com foco especializado no estudo e implementação de Interfaces Homem-Máquina (IHM).                             </p>
                             </div>
                         </div>
                     </div>
@@ -261,16 +263,16 @@
                     <div class="item features-image mb-4 col-12 col-md-4">
                         <div class="item-wrapper">
                             <div class="image-wrap">
-                                <img src="{{ asset("mobirise/assets/images/mbr-816x544.jpeg") }}" alt="Mobirise Website Builder">
+                                <img src="{{ asset("img/perfil/imagem_iago_perfil.jpeg") }}" alt="Mobirise Website Builder">
                             </div>
                             <div class="content-wrap">
                                 <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
                                     <strong>Iago Medeiros</strong></h5>
                                 <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
-                                    <strong>Projetista</strong>
+                                    <strong>Engenheiro de Controle e Automação</strong>
                                 </h6>
-                                <p class="card-text mbr-fonts-style align-center display-7">
-                                    Desenvolvedor eletrônico e mecânico
+                                <p class="card-text mbr-fonts-style display-7" style="text-align: justify !important;">
+                                    Engenheiro de Controle e Automação projetista e responsável técnico pelo desenvolvimento do projeto elétrico e eletrônico, atuando também na gestão e execução das etapas técnicas.
                                 </p>
                             </div>
                         </div>
@@ -287,97 +289,11 @@
                                 <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
                                     <strong>Água</strong>
                                 </h6>
-                                <p class="card-text mbr-fonts-style align-center display-7">
+                                <p class="card-text mbr-fonts-style display-7" style="text-align: justify !important;">
                                     Tá ai..
+
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam a nibh ut consectetur. Vestibulum nec massa a nisl condimentum mattis. 
                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section data-bs-version="5.1" class="gallery6 mbr-gallery cid-sFAQAQGsOD" id="galeria">
-            <div class="container-fluid">
-                <div class="mbr-section-head">
-                    <h3 class="mbr-section-title mbr-fonts-style align-center m-0 display-2">
-                        <strong>Galeria de Imagens</strong>
-                    </h3>
-                </div>
-                <div class="row mbr-gallery mt-4">
-                    <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                        <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uO2pdllbzB-modal" data-bs-target="#uO2pdllbzB-modal">
-                            <img class="w-100" src="{{ asset("mobirise/assets/images/mbr.jpg") }}" alt="Mobirise Website Builder" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-uO2pdllbzB" data-bs-target="#lb-uO2pdllbzB">
-                            <div class="icon-wrapper">
-                                <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                        <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uO2pdllbzB-modal" data-bs-target="#uO2pdllbzB-modal">
-                            <img class="w-100" src="{{ asset("mobirise/assets/images/mbr-5.jpg") }}" alt="Mobirise Website Builder" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-uO2pdllbzB" data-bs-target="#lb-uO2pdllbzB">
-                            <div class="icon-wrapper">
-                                <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                            </div>
-                        </div>    
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                        <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uO2pdllbzB-modal" data-bs-target="#uO2pdllbzB-modal">
-                            <img class="w-100" src="{{ asset("mobirise/assets/images/mbr-1.jpeg") }}" alt="Mobirise Website Builder" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-uO2pdllbzB" data-bs-target="#lb-uO2pdllbzB">
-                            <div class="icon-wrapper">
-                                <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                            </div>
-                        </div>    
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                        <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uO2pdllbzB-modal" data-bs-target="#uO2pdllbzB-modal">
-                            <img class="w-100" src="{{ asset("mobirise/assets/images/mbr-10.jpeg") }}" alt="Mobirise Website Builder" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-uO2pdllbzB" data-bs-target="#lb-uO2pdllbzB">
-                            <div class="icon-wrapper">
-                                <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                            </div>
-                        </div>    
-                    </div>
-                </div>
-
-                <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="uO2pdllbzB-modal">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <div class="carousel slide" id="lb-uO2pdllbzB" data-interval="5000" data-bs-interval="5000">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="{{ asset("mobirise/assets/images/mbr.jpg") }}" alt="Mobirise Website Builder">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="{{ asset("mobirise/assets/images/mbr-5.jpg") }}" alt="Mobirise Website Builder">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="{{ asset("mobirise/assets/images/mbr-1.jpeg") }}" alt="Mobirise Website Builder">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="{{ asset("mobirise/assets/images/mbr-10.jpeg") }}" alt="Mobirise Website Builder">
-                                        </div>
-                                    </div>
-                                    <ol class="carousel-indicators">
-                                        <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#lb-uO2pdllbzB" data-bs-target="#lb-uO2pdllbzB"></li>
-                                        <li data-slide-to="1" data-bs-slide-to="1" data-target="#lb-uO2pdllbzB" data-bs-target="#lb-uO2pdllbzB"></li>
-                                        <li data-slide-to="2" data-bs-slide-to="2" data-target="#lb-uO2pdllbzB" data-bs-target="#lb-uO2pdllbzB"></li>
-                                        <li data-slide-to="3" data-bs-slide-to="3" data-target="#lb-uO2pdllbzB" data-bs-target="#lb-uO2pdllbzB"></li>
-                                    </ol>
-                                    <a role="button" href="" class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close">
-                                    </a>
-                                    <a class="carousel-control-prev carousel-control" role="button" data-slide="prev" data-bs-slide="prev" href="#lb-uO2pdllbzB">
-                                        <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
-                                        <span class="sr-only visually-hidden">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next carousel-control" role="button" data-slide="next" data-bs-slide="next" href="#lb-uO2pdllbzB">
-                                        <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
-                                        <span class="sr-only visually-hidden">Next</span>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -395,7 +311,6 @@
                             <li class="foot-menu-item mbr-fonts-style display-7">Atualmente</li>
                             <li class="foot-menu-item mbr-fonts-style display-7">Sobre</li>
                             <li class="foot-menu-item mbr-fonts-style display-7">Time<br></li>
-                            <li class="foot-menu-item mbr-fonts-style display-7">Galeria</li>
                         </ul>
                     </div>
                     
