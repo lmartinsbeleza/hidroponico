@@ -1,7 +1,7 @@
 <x-layout>
     <div class="m-4">
         <div class="row w-100">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="row mb-2">
                     <div class="col-md-6 d-flex flex-column align-center">
                         <h6 class="mt-2">Bombas dos Tanques:</h6>
@@ -38,10 +38,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div id="temperatureAmbienteGraphic"></div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
+                <div id="humidadeGraphic"></div>
+            </div>
+            <div class="col-md-3">
                 <div id="temperatureAguaGraphic"></div>
             </div>
 

@@ -14,6 +14,7 @@ class UserSeeder extends Seeder
             'email' => "luiz.paulo@hidroview.com",
             'email_verified_at' => now(),
             'password' => bcrypt("123"),
+            'admin' => true
         ]);
 
         User::create([
@@ -21,6 +22,7 @@ class UserSeeder extends Seeder
             'email' => "iago.medeiros@hidroview.com",
             'email_verified_at' => now(),
             'password' => bcrypt("123"),
+            'admin' => true,
         ]);
         
         User::factory()->count(5)->create();

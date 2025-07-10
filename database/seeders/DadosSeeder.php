@@ -17,6 +17,7 @@ class DadosSeeder extends Seeder
                     "temperatura_agua" => number_format((22 + (fake()->numberBetween(-8, 8)/fake()->numberBetween(2, 8))), 3),
                     "condutividade" => number_format((1.8 + (fake()->numberBetween(-1, 1)/fake()->numberBetween(2, 8))), 3),
                     "luminosidade" => number_format((1.8 + (fake()->numberBetween(-1, 1)/fake()->numberBetween(2, 8))), 3),
+                    "humidade" => number_format((1.8 + (fake()->numberBetween(-1, 1)/fake()->numberBetween(2, 8))), 3),
                     "temperatura_ambiente" => number_format((1.8 + (fake()->numberBetween(-1, 1)/fake()->numberBetween(2, 8))), 3),
                     "nivel_baixo" => fake()->numberBetween(0, 1),
                     "nivel_alto" => fake()->numberBetween(0, 1),

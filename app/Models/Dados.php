@@ -17,7 +17,13 @@ class Dados extends Model
         "condutividade",
         "temperatura_ambiente",
         "luminosidade",
+        "humidade",
         "nivel_baixo",
         "nivel_alto",
+        'motor_principal',
+        'motor_agua_limpa',
+        'motor_fertilizante',
+        'motor_acido',
+        'motor_base',
     ];
 }

@@ -12,9 +12,15 @@ return new class extends Migration {
             $table->double('temperatura_agua')->nullable();
             $table->double('condutividade')->nullable();
             $table->double('luminosidade')->nullable();
+            $table->double('humidade')->nullable();
             $table->double('temperatura_ambiente')->nullable();
             $table->boolean('nivel_baixo')->default(false);
             $table->boolean('nivel_alto')->default(false);
+            $table->boolean('motor_principal')->default(false);
+            $table->boolean('motor_agua_limpa')->default(false);
+            $table->boolean('motor_fertilizante')->default(false);
+            $table->boolean('motor_acido')->default(false);
+            $table->boolean('motor_base')->default(false);
             $table->unsignedBigInteger('hidroponia_id');
             $table->timestamps();
 
