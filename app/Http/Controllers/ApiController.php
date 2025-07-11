@@ -41,7 +41,7 @@ class ApiController extends Controller
                 "temperatura_agua" => $req->temperatura_agua == "nan" || is_null($req->temperatura_agua) ? 0.0 : $req->temperatura_agua,
                 "condutividade" => $req->TDS,
                 "temperatura_ambiente" => $req->temperatura_ambiente == "nan" || is_null($req->temperatura_ambiente)? 0.0 : $req->temperatura_ambiente,
-                "luminosidade" => $req->luminosidade >= 0 ? 0.0 : $req->luminosidade,
+                "luminosidade" => $req->luminosidade < 0 || $req->luminosidade == "nan" || is_null($req->luminosidade) ? 0.0 : $req->luminosidade,
                 "humidade" => $req->humidade_ambiente == "nan" || is_null($req->humidade_ambiente)? 0.0 : $req->humidade_ambiente,
                 "nivel_baixo" => $req->nivel_baixo === "true",
                 "nivel_alto" => $req->nivel_alto === "true",
@@ -51,12 +51,6 @@ class ApiController extends Controller
                 'motor_acido' => $utlimo_dado->motor_acido,
                 'motor_base' => $utlimo_dado->motor_base,
             ]);
-             /*
-             Agua limpa = PH/ACIDO
-             Fertilizante = Base
-             Acido - Agua Limpa
-             Base - Fertilizante
-             */
     
             return response()->json($req->all(), 200);
         }catch(\Exception $e){

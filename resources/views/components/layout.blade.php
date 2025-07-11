@@ -1,4 +1,4 @@
-@props([ 'title' => 'HidroView', 'background_color' => '', 'class' => ''])
+@props([ 'title' => 'HidroView', 'background_color' => '', 'class' => '', 'disableNavigation' => false ])
 <!DOCTYPE html>
 <html lang="pt-br" class="bg-gray-200" style="width: 100%; height: 100%;">
   <head>
@@ -20,6 +20,9 @@
   </head>
   <x-notification />
   <body class="{{ $background_color.' font-sans antialiased' }}" style="width: 100%; height: 100%;">
+    @if(!$disableNavigation)
+      <x-navigation/>
+    @endif
     <div class="{{ $class }}" style="width: 100%; height: 100%;">
       {{ $slot }}
     </div>

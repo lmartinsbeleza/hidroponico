@@ -358,7 +358,7 @@ window.onload = function() {
         let tempAgua = 0.0;
         let humidAmbiente = 0.0;
         let tempAmbiente = 0.0;
-        let lum = [];
+        let lum = 0.0;
         let horario = [];
         
         for(const data of dados){
@@ -377,7 +377,7 @@ window.onload = function() {
             cond.push(data.condutividade);
             temp.push(data.temperatura_agua);
             ph.push(data.ph);
-            lum.push(data.luminosidade);
+            lum = data.luminosidade;
             horario.push(`${dataHor.getDate()}/${dataHor.getMonth() + 1} - ${dataHor.getHours()}:${dataHor.getMinutes()}`);
         }
         //Atualiza graficos de porcentagem
@@ -450,6 +450,9 @@ window.onload = function() {
                 categories: horario
             }
         });
+
+        //Atualiza Luminosidade
+        $("#luminosidade").html(verificaLum(lum));
     }
 
     function getColorByTemp(temp) {
@@ -480,6 +483,22 @@ window.onload = function() {
         motorFertilizante ? $("#fertilizanteButton").attr("checked", "checked") : $("#fertilizanteButton").removeAttr("checked");
         motorBase ? $("#baseButton").attr("checked", "checked") : $("#baseButton").removeAttr("checked");
         motorAcido ? $("#acidoButton").attr("checked", "checked") : $("#acidoButton").removeAttr("checked");
+    }
+
+    function verificaLum(lumin){
+        let lum = Math.floor(lumin)
+        
+        if(lum < 5) {
+            return "Escuridão Total";
+        } else if (6 <= lum && lum < 100) {
+            return "Baixa Lum.";
+        } else if (101 <= lum && lum< 500) {
+            return "Lum. Padrão";
+        } else if (501 <= lum && lum< 10000) {
+            return "Alta Lum.";
+        } else if (10001 <= lum){
+            return "Lum. Extrema"
+        }
     }
 
     $("input[type='checkbox']").on("input", function(){

@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout disableNavigation="false">
     <div class="d-flex align-items-center py-4" style="width: 100%; height: 100%;">
         <div class="container card p-3" style="max-width: 430px">
             <section class='login-header text-center mb-3'>

@@ -30,10 +30,14 @@
                     </div>
 
                     <div class="col-md-6">
-                        <h6 class="mt-2">Sensores de Níveis:</h6>
+                        <h6 class="mt-2">Sensores:</h6>
                         <div class="d-flex flex-column align-items-center justify-content-center" style="flex-wrap: wrap">
-                            <span class="legenda red fs-4" id="nivelAlto">Alto</span>
-                            <span class="legenda red fs-4" id="nivelBaixo">Baixo</span>
+                            <span class="legenda red fs-4" id="nivelAlto">Nível Alto</span>
+                            <span class="legenda red fs-4" id="nivelBaixo">Nível Baixo</span>
+                            <span class="border border-3 rounded-pill text-center py-2 px-3 fs-4">
+                                <div>Luminosidade</div>
+                                <b id="luminosidade" class="fs-6">-</b>
+                            </span>
                         </div>
                     </div>
                 </div>

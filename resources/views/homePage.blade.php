@@ -247,7 +247,7 @@
                     <div class="item features-image mb-4 col-12 col-md-4">
                         <div class="item-wrapper">
                             <div class="image-wrap">
-                                <img src="{{ asset("mobirise/assets/images/team1.jpg") }}" alt="Mobirise Website Builder">
+                                <img src="{{ asset("img/perfil/imagem_luiz_perfil.jpeg") }}" alt="Mobirise Website Builder">
                             </div>
                             <div class="content-wrap">
                                 <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5"><strong>Luiz Paulo</strong></h5>
@@ -281,18 +281,16 @@
                     <div class="item features-image mb-4 col-12 col-md-4">
                         <div class="item-wrapper">
                             <div class="image-wrap">
-                                <img src="{{ asset("mobirise/assets/images/team3.jpg") }}" alt="Mobirise Website Builder">
+                                <img src="{{ asset("img/perfil/imagem_rovani_perfil.jpeg") }}" alt="Mobirise Website Builder">
                             </div>
                             <div class="content-wrap">
                                 <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
                                     <strong>Matheus Rovani</strong></h5>
                                 <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
-                                    <strong>Água</strong>
+                                    <strong>Engenheiro de Controle e Automação</strong>
                                 </h6>
                                 <p class="card-text mbr-fonts-style display-7" style="text-align: justify !important;">
-                                    Tá ai..
-
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam a nibh ut consectetur. Vestibulum nec massa a nisl condimentum mattis. 
+                                    Engenheiro de Controle e Automação e técnico responsável pelo desenvolvimento da documentação, além da realização da pesquisa de campo e mercado de ambito Hidropônico.
                                 </p>
                             </div>
                         </div>

@@ -31,6 +31,12 @@ class HomeController extends Controller
         return view('login');
     }
 
+    public function logout() {
+        auth()->logout();
+
+        return redirect()->route('homePage');
+    }
+
     public function authenticate(Request $req) {
         if(auth()->attempt(["email" => $req->email, "password" => $req->password])) 
             return redirect()->route('dashboard')->with("message", "Bem-vindo: ".auth()->user()->name);
